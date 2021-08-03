@@ -1,0 +1,5 @@
+Credentials cache: API:0B240B26-CC2F-4831-A977-D517EDE4B8C0
+        Principal: cluis-go@42LISBOA.COM
+
+  Issued                Expires               Principal
+Aug  3 10:12:36 2021  Aug  3 20:12:30 2021  krbtgt/42LISBOA.COM@42LISBOA.COM
