@@ -6,7 +6,7 @@
 /*   By: cluis-go <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 13:55:31 by cluis-go          #+#    #+#             */
-/*   Updated: 2021/08/11 15:26:08 by cluis-go         ###   ########.fr       */
+/*   Updated: 2021/08/13 12:39:25 by cluis-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ char	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
