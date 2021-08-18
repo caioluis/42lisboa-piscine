@@ -10,22 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
+int		ft_strlen(char *str)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
+	while (str[i] != '\0')
 	{
 		i++;
 	}
+	return (i);
+}
+
+char	*ft_strcat(char *dest, char *src)
+{
+	int i;
+	int	j;
+
+	i = ft_strlen(dest);
+	j = 0;
 	while (src[j] != '\0')
 	{
-		dest[i] = src[j];
-		i++;
+		dest[i + j] = src[j];
 		j++;
 	}
+	dest[ft_strlen(dest)] = '\0';
 	return (dest);
 }
