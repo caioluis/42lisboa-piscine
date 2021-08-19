@@ -6,11 +6,11 @@
 /*   By: cluis-go <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 15:32:06 by cluis-go          #+#    #+#             */
-/*   Updated: 2021/08/16 15:39:55 by cluis-go         ###   ########.fr       */
+/*   Updated: 2021/08/19 10:03:13 by cluis-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
 	int	i;
 
@@ -24,7 +24,7 @@ int		ft_strlen(char *str)
 
 char	*ft_strcat(char *dest, char *src)
 {
-	int i;
+	int	i;
 	int	j;
 
 	i = ft_strlen(dest);
