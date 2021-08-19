@@ -6,7 +6,7 @@
 /*   By: cluis-go <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 15:32:06 by cluis-go          #+#    #+#             */
-/*   Updated: 2021/08/19 10:03:13 by cluis-go         ###   ########.fr       */
+/*   Updated: 2021/08/19 13:39:32 by cluis-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,14 @@ int	ft_strlen(char *str)
 char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
-	int	j;
 
 	i = ft_strlen(dest);
-	j = 0;
-	while (src[j] != '\0')
+	while (*src != '\0')
 	{
-		dest[i + j] = src[j];
-		j++;
+		dest[i] = *src;
+		i++;
+		src++;
 	}
-	dest[ft_strlen(dest)] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
