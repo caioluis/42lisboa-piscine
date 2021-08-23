@@ -6,15 +6,15 @@
 /*   By: cluis-go <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 22:43:30 by cluis-go          #+#    #+#             */
-/*   Updated: 2021/08/18 22:43:30 by cluis-go         ###   ########.fr       */
+/*   Updated: 2021/08/23 10:56:07 by cluis-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
-	int c;
-	int s;
-	int res;
+	int	c;
+	int	s;
+	int	res;
 
 	c = 0;
 	s = 1;
