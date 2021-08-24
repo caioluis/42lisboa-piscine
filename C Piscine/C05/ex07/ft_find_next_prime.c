@@ -6,7 +6,7 @@
 /*   By: cluis-go <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 10:52:23 by cluis-go          #+#    #+#             */
-/*   Updated: 2021/08/24 11:11:10 by cluis-go         ###   ########.fr       */
+/*   Updated: 2021/08/24 14:55:08 by cluis-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@ int	ft_is_prime(int nb)
 {
 	int	i;
 
-	if (nb <= 1)
+	if (nb == 2)
+		return (1);
+	if (nb < 2 || nb % 2 == 0)
 		return (0);
-	i = 2;
-	while (i <= nb / 2)
+	i = 3;
+	while (i < nb)
 	{
 		if (nb % i == 0)
-		{
 			return (0);
-		}
-		i++;
+		i += 2;
 	}
 	return (1);
 }
