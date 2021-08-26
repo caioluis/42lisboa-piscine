@@ -6,14 +6,14 @@
 /*   By: cluis-go <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 12:24:19 by cluis-go          #+#    #+#             */
-/*   Updated: 2021/08/24 13:41:29 by cluis-go         ###   ########.fr       */
+/*   Updated: 2021/08/26 09:25:44 by cluis-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_string(char *str)
-{
+void	ft_putstr(char *str)
+{	
 	int	i;
 
 	i = 0;
@@ -25,48 +25,50 @@ void	ft_print_string(char *str)
 	write(1, "\n", 1);
 }
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char	*s1, char	*s2)
 {
-	int	c;
-
-	c = 0;
-	while ((s1[c] == s2[c]) && (s1[c] != '\0') && (s2[c] != '\0'))
-		c++;
-	return (s1[c] - s2[c]);
-}
-
-void	ft_swap(char *a, char *b)
-{
-	int	aux;
-
-	aux = *a;
-	*a = *b;
-	*b = aux;
-}
-
-int	main(int argc, char **argv)
-{
-	int	j;
 	int	i;
 
+	i = 0;
+	while ((s1[i] == s2[i]) && (s1[i] != '\0' && s2[i] != '\0'))
+		i++;
+	return (s1[i] - s2[i]);
+}
+
+void	ft_sort_argc(char *tab[], int size)
+{
+	int		i;
+	int		j;
+	char	*swap;
+
 	i = 1;
-	if (argc > 1)
+	while (i < size)
 	{
-		while (i < argc - 1)
+		j = i + 1;
+		while (j < size)
 		{
-			if (ft_strcmp(argv[i], argv[i + 1]) > 0)
+			if (ft_strcmp(tab[j], tab[i]) < 0)
 			{
-				ft_swap(argv[i], argv[i + 1]);
-				i = 0;
+				swap = tab[i];
+				tab[i] = tab[j];
+				tab[j] = swap;
 			}
-			i++;
+			j++;
 		}
+		i++;
 	}
-	j = 1;
-	while (j < argc)
+}
+
+int	main(int	argc, char	*argv[])
+{
+	int	i;
+
+	ft_sort_argc(argv, argc);
+	i = 1;
+	while (i < argc)
 	{
-		ft_print_string(argv[j]);
-		j++;
+		ft_putstr(argv[i]);
+		i++;
 	}
 	return (0);
 }
