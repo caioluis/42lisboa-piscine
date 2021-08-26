@@ -6,7 +6,7 @@
 /*   By: cluis-go <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 11:34:08 by cluis-go          #+#    #+#             */
-/*   Updated: 2021/08/24 17:53:11 by cluis-go         ###   ########.fr       */
+/*   Updated: 2021/08/26 11:36:58 by cluis-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ft_print_string(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
+	write(1, "\n", 1);
 }
 
 int	main(int argc, char **argv)
